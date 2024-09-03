@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPGRADING</title>
+    <link rel="stylesheet" href="./page.css">
+</head>
+<body class="upgrade">
+
+    <header>
+        <nav class="upgrade4">
+            <a href="./index.html">HOME</a>
+        </nav>
+    </header>
+    <div class="fixed1">
+        <a href="https://wa.me/2348081082431">
+        <i class="fa-brands fa-square-whatsapp"> message admin now</i>
+    </a>
+    </div>
+    <div class="upgrade1">
+        <div><h1>DO YOU KNOW YOU CAN UPGRADE YOUR RESULT ?</h1></div>
+        <div><p>YES, you can still upgrade your result.<br>Result upgrading is stil ongoing becuase we are going to use our official private access link to upgrade your result for you.<br>i cant explain much about upgrading to you here, but if you are serious and ready to upgrade your result,<br>you should message me on whatsapp now.<br>if you also have error on your result and your result is bad, you should also fill the form below and message me on whatsapp now</p></div>
+        <div><h1>Please fill the form below if you want to upgrade your result or you want to correct the error on your result</h1></div>
+    
+    </div>
+
+    <div class="contains">
+        <form class="boxs" id="whatsappForm">
+            <h2>FILL THE FORM TO UPGRADE YOUR RESULT</h2>
+            <label for="name">NAME*</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="tel">Tel*</label>
+            <input type="tel" id="tel" name="tel" placeholder="Enter your phone number" required>
+
+            <label for="message">Message*</label>
+            <textarea id="message" name="message" placeholder="Enter the type of Result you want to upgrade" required></textarea>
+
+            <button type="submit">SEND</button>
+        </form>
+    </div>
+    
+    <div class="upgrade2">
+       <div> <h2>PLEASE FILL THE FORM ABOVE IF YOU ARE READY TO UPGRADE YOUR RESULT OR CORRECT ANY ERROR ON YOUR RESULT.<br> YOUR RESULT WILL BE AVAILBE WITHIN AN HOUR.<br> DONT DELAY YOURSELF WHEN THERE IS AN OPPORTUNITY TO UPGRADE YOUR BAD RESULT TO GOOD RESULT .<br> AS YOU ALREADY KNOW THAT WE CAN NEVER DISAPPOINT YOU </h2></div>
+        <div><a href="https://wa.me/2348081082431">click here to message admin</a></div>
+    </div>
+
+
+
+    <script>
+
+
+        document.getElementById('whatsappForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the form from submitting the traditional way
+            
+                // Get the form values
+                var name = document.getElementById('name').value;
+                var tel = document.getElementById('tel').value;
+                var message = document.getElementById('message').value;
+            
+                // Encode the message for the WhatsApp URL
+                var whatsappMessage = `Hello Sir, my name is ${encodeURIComponent(name)}. I would like to upgrade this my result: ${encodeURIComponent(message)}. Please my contact is ${encodeURIComponent(tel)}.`;
+            
+                // Create the WhatsApp link with the encoded message
+                var whatsappUrl = `https://wa.me/2348081082431?text=${whatsappMessage}`;
+            
+                // Open WhatsApp link in a new tab
+                window.open(whatsappUrl, '_blank');
+            });
+
+             // Prevent copy and show an alert
+     document.addEventListener('copy', function(event) {
+        // Prevent the default copy action
+        event.preventDefault();
+
+        // Show an alert with the admin contact
+        alert("Content copying is not allowed. Please contact the admin at 08081082431.");
+    });
+           
+        </script>
+
+</body>
+</html>
+    
+</body>
+</html>

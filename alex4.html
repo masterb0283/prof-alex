@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMISSION PROCESSING</title>
+    <link rel="stylesheet" href="./page.css">
+</head>
+<body  class="sch">
+    <header>
+        <nav class="sch1">
+            <a href="./index.html">HOME</a>
+        </nav>
+    </header>
+    <div class="sch2">
+        <div><h1>DO YOU NEED SCHOOL UPDATE AND ADMISSION PROCESSING ?</h1></div>
+        <div><p>dear candidate, you are at the right place if you need information about any school of your choice or you need admission procesing.<br>All you have to do is just to message the admin or you fill the form below</p></div>
+        <div><a href="https://wa.me/2348081082431">message admin now</a></div>
+    </div>
+
+
+    <div class="containa">
+        <form class="boxa" id="whatsappForm">
+            <h2>FILL THE FORM IF YOU NEED ADMISSION PROCESSING</h2>
+            <label for="name">NAME*</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="tel">Tel*</label>
+            <input type="tel" id="tel" name="tel" placeholder="Enter your phone number" required>
+
+            <label for="message">Message*</label>
+            <textarea id="message" name="message" placeholder="Enter the name of the school you want" required></textarea>
+
+            <button type="submit">SEND</button>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+
+
+        document.getElementById('whatsappForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the form from submitting the traditional way
+            
+                // Get the form values
+                var name = document.getElementById('name').value;
+                var tel = document.getElementById('tel').value;
+                var message = document.getElementById('message').value;
+            
+                // Encode the message for the WhatsApp URL
+                var whatsappMessage = `Hello Sir, my name is ${encodeURIComponent(name)}. I am seeking admission into this school: ${encodeURIComponent(message)}. Please my contact is ${encodeURIComponent(tel)}.`;
+            
+                // Create the WhatsApp link with the encoded message
+                var whatsappUrl = `https://wa.me/2348081082431?text=${whatsappMessage}`;
+            
+                // Open WhatsApp link in a new tab
+                window.open(whatsappUrl, '_blank');
+            });
+
+             // Prevent copy and show an alert
+     document.addEventListener('copy', function(event) {
+        // Prevent the default copy action
+        event.preventDefault();
+
+        // Show an alert with the admin contact
+        alert("Content copying is not allowed. Please contact the admin at 08081082431.");
+    });
+           
+        </script>
+
+    
+</body>
+</html>
